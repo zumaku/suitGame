@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    /* background: #3C6255; */
+    background: #61876E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 50%;
+    min-width: 500px;
+    height: 80%;
+    /* background-color: #61876E; */
+    background-color: #3C6255;
+    border-radius: 20px;
+}
+.side{
+    height: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+.side .choise,
+.comChoise{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    border: 5px solid #A6BB8D;
+    background-color: #F0ECCF;
+    transition: .2s ease-in-out;
+    display: grid;
+    place-items: center;
+}
+.side .choise:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.side .choise:active{ transform: scale(.9); }
+
+.side .choise .icon,
+.comChoise .iconComp{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.side .choise .icon.gunting{ background-image: url(cut.png); }
+.side .choise .icon.batu{ background-image: url(rock.png); }
+.side .choise .icon.kertas{ background-image: url(paper.png); }
+
+.side h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.334);
+    position: absolute;
+}
+.comp h1{ top: 10px; }
+.you h1{ bottom: 10px; }
+
+.hasil{
+    background-color: #A6BB8D;
+    border: 5px solid #EAE7B1;
+    width: 50%;
+    height: 5em;
+    border-radius: 50px;
+    position: absolute;
+    box-sizing: border-box;
+    top: -2.5em;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hasil h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.line{
+    position: absolute;
+    background-color: #EAE7B1;
+    width: 100%;
+    height: 10px;
+    top: -.5em;
+}
+
+.loveHand,
+.formSaran{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    transition: .5s ease-in;
+}
+.loveHand img{
+    width: 300px;
+    height: 300px;
+    transition: 1s ease-in;
+}
+.formSaran h1{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0 20px;
+}
+.formSaran .data{
+    width: 40%;
+    min-width: 400px;
+    padding: 5px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #EAE7B1;
+    margin: 10px 0;
+    border: 3px solid #61876E;
+    border-radius: 10px;
+    font-size: 1em;
+}
+.formSaran .btnSubmit{
+    padding: 5px 15px;
+    box-sizing: border-box;
+    background-color: #3C6255;
+    border-radius: 10px;
+    color: #EAE7B1;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #EAE7B1;
+    transition: .3s ease-in-out;
+}
+.formSaran .btnSubmit:hover{
+    transform: scale(1.05);
+    background-color: #61876E;
+}
+
+.d-none{
+    display: none;
+}
+
+.footer{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.footer span{
+    color: #EAE7B1;
+}
+.footer .github{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.footer a:hover{
+    color: #EAE7B1;
+    text-decoration: underline;
+}
+
+.terpilih{
+    box-shadow: 0px 0px 20px 0px rgba(89,207,139,0.75);
+}
+
+.normalEye{
+    background-image: url(normalEye.png);
+    animation: normalEye 3s linear 2s alternate infinite;
+}
+@keyframes normalEye {
+    0%{ transform: translateY(0); }
+    10%{ transform: translateY(0); }
+    20%{ transform: translateY(-10px); }
+    50%{ transform: translateY(-20px); }
+    60%{ transform: translateY(0); }
+    100%{ transform: translateY(0); }
+}
+
+.kalahEye{
+    background-image: url(kalahEye.png);
+    animation: kalahEye 2s linear alternate infinite;
+}
+@keyframes kalahEye {
+    0%{ transform: translateY(0); }
+    10%{ transform: translateY(0); }
+    20%{ transform: translateY(5px); }
+    50%{ transform: translateY(10px); }
+    90%{ transform: translateY(0); }
+    100%{ transform: translateY(0); }
+}
+
+.menangEye{
+    background-image: url(menangEye.png);
+    animation: normalEye 2s linear alternate infinite;
+}
+.seriEye{ background-image: url(seriEye.png); }
+
+
+
+
+
+
+
+
+
+@media (max-width: 574px) {
+    .container{
+        width: 50%;
+        min-width: 300px;
+    }
+    .side .choise,
+    .comChoise{
+        width: 75px;
+        height: 75px;
+    }
+    .side h1{
+        font-size: 40px;
+    }
+    .hasil{
+        width: 70%;
+    }
+    .formSaran h1{
+        font-size: 1.8em;
+        margin: 5px 0 10px;
+    }
+    .formSaran .data{
+        /* width: 80%; */
+        min-width: 280px;
+    }
+}

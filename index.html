@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Game Suit">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Zul Fadli Ahmad">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="side comp">
+            <h1>Lawan</h1>
+            <div class="comChoise">
+                <div class="iconComp normalEye"></div>
+            </div>
+        </div>
+        <div class="side you">
+            <div class="hasil"><h1>Pilih</h1></div>
+            <div class="line"></div>
+            <h1>Kamu</h1>
+            <div class="choise" id="gunting">
+                <div class="icon gunting"></div>
+            </div>
+            <div class="choise" id="batu">
+                <div class="icon batu"></div>
+            </div>
+            <div class="choise" id="kertas">
+                <div class="icon kertas"></div>
+            </div>
+        </div>
+    </div>
+    <div class="loveHand d-none">
+        <img src="heart.png" alt="">
+    </div>
+    <form action="" method="POST" class="formSaran d-none">
+        <h1>Berikan Masukan atau Saran!</h1>
+        <input type="text" class="data nama" name="namaPengirim" id="" placeholder="Nama">
+        <input type="email" class="data email" name="email" id="" placeholder="Email">
+        <textarea class="data saran" name="saran" id="" cols="30" rows="10" placeholder="Masukan dan Saran"></textarea>
+        <button type="submit" class="btnSubmit" id="mengirim">Kirim</button>
+    </form>
+    <!-- <audio src="backsound.mp3" controls>
+        <embed name="GoodEnough" src="backsound.mp3" loop="false" hidden="true" autostart="true">
+    </audio> -->
+    <div class="footer">Made with <span>&#10084;</span> by <a href="https://github.com/zumaku" class="github">zumaku</a></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
