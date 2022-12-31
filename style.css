@@ -109,11 +109,6 @@ body{
     width: 300px;
     height: 300px;
 }
-/* .gif.thumbUo img{
-    width: 100px;
-    height: 100px;
-} */
-
 .formSaran h1{
     color: white;
     text-align: center;
@@ -146,6 +141,16 @@ body{
 .formSaran .btnSubmit:hover{
     transform: scale(1.05);
     background-color: #61876E;
+}
+.formSaran .btnClose{
+    width: 32px;
+    height: 32px;
+    background-image: url(close.png);
+    background-size: cover;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
 }
 
 .d-none{
@@ -232,11 +237,14 @@ body{
         width: 70%;
     }
     .formSaran h1{
-        font-size: 1.8em;
+        font-size: 2em;
         margin: 5px 0 10px;
     }
     .formSaran .data{
-        /* width: 80%; */
         min-width: 280px;
+    }
+    .formSaran .btnClose{
+        width: 24px;
+        height: 24px;
     }
 }

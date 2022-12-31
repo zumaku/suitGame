@@ -2,7 +2,9 @@ const gunting = document.querySelector('#gunting');
 const batu = document.querySelector('#batu');
 const kertas = document.querySelector('#kertas');
 const loveHand = document.querySelector('.loveHand');
+const laugh = document.querySelector('.laugh');
 const formSaran = document.querySelector('.formSaran');
+const btnClose = document.querySelector('.formSaran .btnClose');
 
 const hasil = document.querySelector('.hasil h1');
 const iconComp = document.querySelector('.comChoise .iconComp')
@@ -123,23 +125,31 @@ function menang3x(){
                     
                     // menghilankan tampilan form
                     setTimeout(function(){
-                        formSaran.classList.add('d-none')
+                        formSaran.classList.add('d-none');
+                        console.log('close')
                     }, 2000);
                 })
+
+                // fungsi untuk tombol clicknya
+                btnClose.addEventListener('click', function(){
+                    formSaran.classList.add('d-none');
+                });
             }
         }, 3000);
     }
 }
 
 // fungsi saat kalah 3x
-
-// =======> KALAU ADA WAKTU PERBAIKI INI
-
 function kalah3x(){
-    if(kalah === 3){
+    if(jmlKalah === 3){
         setTimeout(function(){
             alert("Nyak.. 3 kali kalah de'");
             alert("HUUUUU... Hehe");
+            laugh.classList.remove('d-none');
+            jmlKalah = 0;
+            setTimeout(function(){
+                laugh.classList.add('d-none');
+            }, 4000);
         }, 3000);
     }
 }
@@ -180,6 +190,7 @@ gunting.addEventListener('click', function(){
     var pilihanUser = 'gunting';
     startPemilihan(pilihanUser);
     menang3x();
+    kalah3x();
 });
 batu.addEventListener('click', function(){
     choise[0].classList.remove('terpilih');
@@ -189,6 +200,7 @@ batu.addEventListener('click', function(){
     var pilihanUser = 'batu';
     startPemilihan(pilihanUser);
     menang3x();
+    kalah3x();
 });
 kertas.addEventListener('click', function(){
     choise[0].classList.remove('terpilih');
@@ -198,18 +210,8 @@ kertas.addEventListener('click', function(){
     var pilihanUser = 'kertas';
     startPemilihan(pilihanUser);
     menang3x();
+    kalah3x();
 });
-
-
-
-
-
-
-
-
-// window.onload = () => {
-    
-// }
 
 
 
