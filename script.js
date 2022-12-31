@@ -69,6 +69,7 @@ function kalah(){
             iconComp.classList.add('normalEye');
         }, 4000);
     }, 2000);
+    jmlKalah++;
 }
 // => fungsi saat seri
 function seri(){
@@ -126,6 +127,19 @@ function menang3x(){
                     }, 2000);
                 })
             }
+        }, 3000);
+    }
+}
+
+// fungsi saat kalah 3x
+
+// =======> KALAU ADA WAKTU PERBAIKI INI
+
+function kalah3x(){
+    if(kalah === 3){
+        setTimeout(function(){
+            alert("Nyak.. 3 kali kalah de'");
+            alert("HUUUUU... Hehe");
         }, 3000);
     }
 }

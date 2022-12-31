@@ -91,7 +91,7 @@ body{
     top: -.5em;
 }
 
-.loveHand,
+.gif,
 .formSaran{
     position: absolute;
     top: 0;
@@ -104,13 +104,16 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 3;
-    transition: .5s ease-in;
 }
-.loveHand img{
+.gif.loveHand img{
     width: 300px;
     height: 300px;
-    transition: 1s ease-in;
 }
+/* .gif.thumbUo img{
+    width: 100px;
+    height: 100px;
+} */
+
 .formSaran h1{
     color: white;
     text-align: center;
